@@ -1,0 +1,3 @@
+# fine color group and count active picture count. 
+* refer to original image  path_to_image.jpg
+* and see the test result image: test_result.png
