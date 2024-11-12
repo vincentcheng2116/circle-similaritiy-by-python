@@ -17,4 +17,11 @@ Color block 2, UL, (866, 369),LR, (955, 503), Pixel Count, 8215,circle:Similarit
 Color block 3, UL, (350, 241),LR, (465, 470), Pixel Count, 18388,circle:Similarity,0.7128577414585355
 Color block 4, UL, (700, 100),LR, (801, 201), Pixel Count, 10000,circle:Similarity,0.7522252461595405
 ```
+Python you need: 3.x
+(I am use 3.13.0)
 
+you need library:
+pip install pyinstaller
+pip install math
+pip install numpy
+pip install opencv-python
