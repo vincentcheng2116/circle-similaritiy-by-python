@@ -1,10 +1,11 @@
 import cv2
 import numpy as np
 import math
+import os
+import glob
 # Load the image
-image = cv2.imread("path_to_image.jpg")  # Replace with your image file path
+image = cv2.imread("input.jpg")  # Replace with your image file path
 height, width, _ = image.shape
-
 # Calculate the center of the image
 center_x, center_y = width // 2, height // 2
 print(f"Center of the image: ({center_x}, {center_y})")
@@ -40,7 +41,7 @@ for i, contour in enumerate(contours):
     circle_similarity=1- abs(pixel_count-area)/area 
    
     # Print color block information
-    print(f"Color block {i+1}, UL, {top_left},LR, {bottom_right}, Pixel Count, {int(pixel_count)},circle:Similarity,{circle_similarity}")
+    print(f"block,{i+1},x0, {x},y0,{y},x1,{x+w},y1,{y+h},Pixel Count,{int(pixel_count)},circle:Similarity,{circle_similarity}")
     
     # Draw rectangle around each color block
     cv2.rectangle(image, top_left, bottom_right, (0, 255, 0), 2)
@@ -59,9 +60,10 @@ for i, contour in enumerate(contours):
     cv2.putText(image, label1, text_position, font, font_scale, font_color, line_type)
     text_position = (x + w + 5, y + 60)  # Offset to the right of the block
     cv2.putText(image, label2, text_position, font, font_scale, font_color, line_type)
-
+    
 
 # Display the result
 cv2.imshow("Color Blocks with Center", image)
-cv2.waitKey(0)
+cv2.imwrite("output.jpg", image)
+cv2.waitKey(1000)
 cv2.destroyAllWindows()
