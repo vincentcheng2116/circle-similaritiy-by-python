@@ -6,7 +6,7 @@
 
 * test result
 
-[![N|Solid](output.png)]
+[![N|Solid](output.jpg)]
 
 
 ## result shown on screen:
