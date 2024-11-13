@@ -2,11 +2,11 @@
 * refer to original image  path_to_image.jpg
 * and see the test result image: test_result.png
 
-[![N|Solid](path_to_image.jpg)]
+[![N|Solid](input.jpg)]
 
 * test result
 
-[![N|Solid](test_result.png)]
+[![N|Solid](output.png)]
 
 
 ## result shown on screen:
