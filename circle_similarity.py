@@ -29,20 +29,6 @@ for p0 in range(1, n):   # skip first exe name
             print(f"Directory already exists: {result_image_path}")
 
 
-# show_result_image = 1  #  0  no show, none >0 :show n mS
-# 設定目錄路徑
-
-dut_path = './DUT/'  # dut 圖片位置
-dir_path_0 = os.path.dirname(os.path.dirname(dut_path))
-
-if not os.path.exists(dut_path):
-    # Create the directory if it does not exist
-    os.makedirs(dut_path)
-    print(f"Created directory: {dut_path}")
-else:
-    print(f"Directory already exists: {dut_path}")
-
-
 image = cv2.imread("input.jpg")  # Replace with your image file path
 height, width, _ = image.shape
 
@@ -81,7 +67,7 @@ for i, contour in enumerate(contours):
     circle_similarity=1- abs(pixel_count-area)/area 
    
     # Print color block information
-    print(f"Color block {i+1}, UL, {top_left},LR, {bottom_right}, Pixel Count, {int(pixel_count)},circle:Similarity,{circle_similarity}")
+    print(f"block,{i+1},x0,{x},y0,{y},x1,{x+w},y1,{y+h},Px_cnt, {int(pixel_count)},Similarity,{circle_similarity}")
     
     # Draw rectangle around each color block
     cv2.rectangle(image, top_left, bottom_right, (0, 255, 0), 2)
