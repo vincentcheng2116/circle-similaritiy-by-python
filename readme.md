@@ -1,4 +1,6 @@
 # fine color group and count active picture count. 
+## project posted in https://github.com/vincentcheng2116/circle-similaritiy-by-python
+
 * refer to original image  path_to_image.jpg
 * and see the test result image: test_result.png
 
